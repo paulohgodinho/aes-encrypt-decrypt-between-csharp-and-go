@@ -5,7 +5,7 @@ Cryptography libraries can be **very** opinionated, this project shows how to ma
 
 ## Motivation
 
-I have a backend in Go that used AES CFB as the mode for its envryption, and I was simply not capable of decrypting its payloads using C# built-in libraries. The desision was made to move to CBC and overcome its input padding issues on both sides, this repository was created.
+I have a backend in Go that used AES CFB as the mode for its encryption, and I was simply not capable of decrypting its payloads using C# built-in libraries. The desision was made to move to CBC and overcome its input padding issues on both sides, this repository was created to validate that AWS in MODE CBC would work.
 
 ## Sample 
 
@@ -40,7 +40,7 @@ aes-encrypt-decrypt-between-csharp-and-go
 ```
 
 ## Calling directly
-The `RunEncryptionTest.ps1` file shows how to call the projects individually, as an example, here is a call to encrypt a string with Go and decrypts it with C#
+The `RunEncryptionTest.ps1` file shows how to call the projects individually, as an example, here is a call to encrypt a string with Go and decrypt it with C#
 ```
 $env:Key = '2s5v8y/B?E(H+MbQeThWmYq3t6w9z$C&'
 $env:IV = 'XRFLuBIzjpZ8$5F#'
